@@ -1,6 +1,6 @@
 :root {
-  --blue-color: #3955bb;
-  --white-color: #fff;
+  --primary : #3955bb;
+  --white : #fff;
 }
 * {
   margin: 0;
@@ -13,22 +13,25 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: rgba(57, 85, 187, 0.25);
 }
-header {
-  padding: 1rem 2rem;
+.header {
+  background-color: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--blue-color);
-  color: var(--white-color);
+  padding: 1rem 2rem;
 }
-#weather-select {
-  padding: 0.25rem 1rem;
+.header h1 {
+  color: var(--white);
+}
+#select-box {
+  padding: .5rem 1rem;
+  border-radius: 8px;
   outline: none;
   border: none;
-  border-radius: 8px;
 }
-section {
+.info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,15 +41,9 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .location {
   font-size: 20px;
-  color: var(--blue-color);
+  color: var(--primary);
   text-transform: uppercase;
 }
 .temperature {
@@ -54,29 +51,23 @@ section {
 }
 .temperature > span {
   font-size: 48px;
-  margin-right: 0.25rem;
 }
 .weather {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.weather img {
-  max-width: 75px;
+.weather > img {
+  width: 75px;
+  height: 75px;
 }
-.detail {
-  margin-top: .5rem;
-  font-size: 12px;
-  font-weight: bold;
+.details {
   display: flex;
+  margin-top: 8px;
 }
-.detail > span {
-  background-color: var(--blue-color);
-  color: var(--white-color);
+.details > span {
+  font-size: 12px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
   margin: .5rem;
   padding: .5rem .75rem;
-  border-radius: 8px;
-}
-#spinner {
-  display: none;
 }
